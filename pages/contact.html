@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact | North Star Bakery</title>
+    </head>
+
+    <main>
+        <header>
+            <img src="../images/bakery-logo_c.png" width="150" alt="North Star Bakery Logo">
+
+            <h1>Contact Us</h1>
+
+            <nav aria-label="primary">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/about.html">About Us</a></li>
+                    <li><a href="/pages/contact.html" aria-current="page">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <body>
+            <!--Inquiry and Preorder request form-->
+            <section>
+                <form action="/submit-request" method="post">
+                    <fieldset>
+                        <legend>Your Info</legend>
+                        <label for="name">Name:</label>
+                        <br>
+                        <input type="text" id="name" name="name" required>
+                        <br>
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" id="email" name="email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Request</legend>
+                        <label for="pickupDate">Pickup Date:</label>
+                        <br>
+                        <input type="date" id="pickupDate" name="pickupDate">
+                        <br>
+                        <label for="requestType">Request Type:</label>
+                        <br>
+                        <select id="requestType" name="requestType" required>
+                            <option value="preorder">Preorder</option>
+                            <option value="generalQuestion">General Question</option>
+                        </select>
+                        <br>
+                        <label for="requestDetails">Request Details:</label>
+                        <br>
+                        <textarea id="requestDetails" name="requestDetails" rows="4" cols="50">
+                            Enter your request details here...
+                        </textarea>
+                        <br>
+                        <label for="allergy">Allergy Info (if applicable):</label>
+                        <br>
+                        <textarea id="allergy" name="allergy" rows="4" cols="50">
+                            Enter any applicable allergy info here...
+                        </textarea>
+                        <br>
+                    </fieldset>
+
+                    <button type="submit">Submit Request</button>
+
+                </form>
+            </section>
+
+            <!--Location and Hours Information-->
+            <section>
+                <h2>Hours and Location</h2>
+
+                <p><h3>Location</h3></p>
+                <p>1234 Bakery Street</p>
+
+                <p><h3>Hours</h3></p>
+                <p>
+                    <ul>
+                        <li>Monday:    7:00-4:00</li>
+                        <li>Tuesday:   7:00-4:00</li>
+                        <li>Wednesday: 7:00-4:00</li>
+                        <li>Thursday:  7:00-4:00</li>
+                        <li>Friday:    7:00-4:00</li>
+                        <li>Saturday:  7:00-4:00</li>
+                        <li>Sunday:    Closed</li>
+                    </ul>
+                </p>
+            </section>
+
+        </body>
+
+        <footer>
+            <p>&copy; 2026 North Star Bakery</p>
+        </footer>
+    </main>
+</html>
