@@ -3,7 +3,6 @@
    ========================================
    Color palette:
    White:          #FFFFFF
-   Cream/Beige:    #F7E8D6
    Gold:           #D9A85F
    Brown:          #634739
    Grey:           #8C8E88
@@ -125,6 +124,8 @@ header {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
 
 .main-nav a:hover,
@@ -244,9 +245,9 @@ form {
 fieldset {
     margin-bottom: 1.5rem;
     padding: 1.25rem;
-    border: 1px solid #D9A85F;
+    border: 1px solid #634739;
     border-radius: 8px;
-    background-color: #F7E8D6;
+    background-color: white;
 }
 
 legend {
@@ -275,7 +276,7 @@ textarea {
     width: 100%;
     padding: 0.75rem;
 
-    border: 1px solid #D9A85F;
+    border: 1px solid #634739;
     border-radius: 5px;
 
     background-color: white;
