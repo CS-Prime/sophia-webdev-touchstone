@@ -233,57 +233,6 @@ footer p {
 }
 
 
-/* == Larger Screens ====================== */
-
-@media screen and (min-width: 768px) {
-
-    .page-banner {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 6%;
-    }
-
-    .logo {
-        width: 130px;
-    }
-
-    .logo-spacer {
-        display: block;
-        width: 130px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .main-nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .main-nav li {
-        width: auto;
-    }
-
-    .main-nav a {
-        padding: 0.9rem 1.5rem;
-    }
-
-    .page-content {
-        padding: 2rem 0;
-    }
-
-    section {
-        margin-bottom: 2rem;
-        padding: 2rem;
-    }
-}
-
-
 /* == Contact Form ======================== */
 
 form {
@@ -391,9 +340,54 @@ button[type="submit"]:focus {
 }
 
 
-/* == Contact Form - Larger Screens ======= */
+/* == Larger Screens ====================== */
 
 @media screen and (min-width: 768px) {
+
+    .page-banner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 6%;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .logo-spacer {
+        display: block;
+        width: 130px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-nav li {
+        width: auto;
+    }
+
+    .main-nav a {
+        padding: 0.9rem 1.5rem;
+    }
+
+    .page-content {
+        padding: 2rem 0;
+    }
+
+    section {
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
 
     fieldset {
         padding: 1.75rem;
