@@ -2,16 +2,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+
         <title>Contact | North Star Bakery</title>
+
+        <link rel=stylesheet href="/css/styles.css">
     </head>
 
-    <main>
+    <body>
         <header>
-            <img src="../images/bakery-logo_c.png" width="150" alt="North Star Bakery Logo">
+            <div class="page-banner">
+                <img class="logo" src="../images/bakery-logo_c.png" width="130" alt="North Star Bakery Logo">
 
-            <h1>Contact Us</h1>
+                <h1>Contact Us</h1>
 
-            <nav aria-label="primary">
+                <div class="logo-spacer"></div>
+            </div>
+
+            <nav class="main-nav" aria-label="primary">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/pages/products.html">Products</a></li>
@@ -21,46 +30,54 @@
             </nav>
         </header>
 
-        <body>
+        <main class="page-content">
             <!--Inquiry and Preorder request form-->
             <section>
                 <form action="/submit-request" method="post">
                     <fieldset>
                         <legend>Your Info</legend>
+
                         <label for="name">Name:</label>
-                        <br>
+                        
                         <input type="text" id="name" name="name" required>
-                        <br>
+                        
                         <label for="email">Email:</label>
-                        <br>
+                        
                         <input type="email" id="email" name="email" required>
                     </fieldset>
 
                     <fieldset>
                         <legend>Your Request</legend>
+
                         <label for="pickupDate">Pickup Date:</label>
-                        <br>
+                        
                         <input type="date" id="pickupDate" name="pickupDate">
-                        <br>
+                        
                         <label for="requestType">Request Type:</label>
-                        <br>
+                        
                         <select id="requestType" name="requestType" required>
                             <option value="preorder">Preorder</option>
                             <option value="generalQuestion">General Question</option>
                         </select>
-                        <br>
+                        
                         <label for="requestDetails">Request Details:</label>
-                        <br>
-                        <textarea id="requestDetails" name="requestDetails" rows="4" cols="50">
-                            Enter your request details here...
-                        </textarea>
-                        <br>
+                        
+                        <textarea 
+                            id="requestDetails" 
+                            name="requestDetails" 
+                            rows="4" 
+                            cols="50" 
+                            placeholder="Enter your request details here..."></textarea>
+                        
                         <label for="allergy">Allergy Info (if applicable):</label>
-                        <br>
-                        <textarea id="allergy" name="allergy" rows="4" cols="50">
-                            Enter any applicable allergy info here...
-                        </textarea>
-                        <br>
+                        
+                        <textarea 
+                            id="allergy" 
+                            name="allergy" 
+                            rows="4" 
+                            cols="50" 
+                            placeholder="Enter any applicable allergy info here..."></textarea>
+
                     </fieldset>
 
                     <button type="submit">Submit Request</button>
@@ -72,27 +89,27 @@
             <section>
                 <h2>Hours and Location</h2>
 
-                <p><h3>Location</h3></p>
+                <h3>Location</h3>
+
                 <p>1234 Bakery Street</p>
 
-                <p><h3>Hours</h3></p>
-                <p>
-                    <ul>
-                        <li>Monday:    7:00-4:00</li>
-                        <li>Tuesday:   7:00-4:00</li>
-                        <li>Wednesday: 7:00-4:00</li>
-                        <li>Thursday:  7:00-4:00</li>
-                        <li>Friday:    7:00-4:00</li>
-                        <li>Saturday:  7:00-4:00</li>
-                        <li>Sunday:    Closed</li>
-                    </ul>
-                </p>
+                <h3>Hours</h3>
+
+                <ul class="hours-list">
+                    <li>Monday:    7:00-4:00</li>
+                    <li>Tuesday:   7:00-4:00</li>
+                    <li>Wednesday: 7:00-4:00</li>
+                    <li>Thursday:  7:00-4:00</li>
+                    <li>Friday:    7:00-4:00</li>
+                    <li>Saturday:  7:00-4:00</li>
+                    <li>Sunday:    Closed</li>
+                </ul>
             </section>
 
-        </body>
+        </main>
 
         <footer>
             <p>&copy; 2026 North Star Bakery</p>
         </footer>
-    </main>
+    </body>
 </html>
