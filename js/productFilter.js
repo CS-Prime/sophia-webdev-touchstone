@@ -3,10 +3,6 @@
  * @author Cameron Simpson
  */
 
-window.addEventListener("DOMContentLoaded", function() {
-    productFilter();
-})
-
 function productFilter() {
     const filterButtons = document.querySelectorAll(
         ".product-filter button"
@@ -78,3 +74,5 @@ function productFilter() {
 
     applyFilter();
 }
+
+productFilter();
