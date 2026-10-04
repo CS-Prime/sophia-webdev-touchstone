@@ -90,7 +90,7 @@ header {
 }
 
 .logo {
-    width: 110px;
+    width: 130px;
     height: auto;
 }
 
@@ -275,16 +275,12 @@ select,
 textarea {
     width: 100%;
     padding: 0.75rem;
-
     border: 1px solid #634739;
     border-radius: 5px;
-
     background-color: white;
     color: #634739;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-
     transition: border-color 0.2s ease,
                 box-shadow 0.2s ease;
 }
@@ -317,19 +313,14 @@ textarea:focus {
 button[type="submit"] {
     width: 100%;
     padding: 0.85rem 1.5rem;
-
     border: none;
     border-radius: 5px;
-
     background-color: #634739;
     color: white;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: bold;
-
     cursor: pointer;
-
     transition: background-color 0.2s ease,
                 color 0.2s ease;
 }
@@ -338,6 +329,57 @@ button[type="submit"]:hover,
 button[type="submit"]:focus {
     background-color: #D9A85F;
     color: #634739;
+}
+
+
+/* -- Product Filter ---------------------- */
+
+.product-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-filter button {
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #634739;
+    border-radius: 5px;
+    background-color: white;
+    color: #634739;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.product-filter button:hover,
+.product-filter button:focus,
+.product-filter button.active {
+    background-color: #D9A85F;
+    color: #634739;
+}
+
+
+/* -- Form Validation --------------------- */
+
+.form-error {
+    display: block;
+    min-height: 1.5rem;
+    margin-top: 0.25rem;
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input.input-error,
+select.input-error,
+textarea.input-error {
+    border: 1px solid red;
 }
 
 

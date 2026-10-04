@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
         <title>Contact | North Star Bakery</title>
 
         <link rel=stylesheet href="/css/styles.css">
+
+        <script src="/js/formValidation.js" defer></script>
     </head>
 
     <body>
@@ -35,51 +37,69 @@
         <main class="page-content">
             <!--Inquiry and Preorder request form-->
             <section>
-                <form action="/submit-request" method="post">
+                <form id="contactForm" action="/submit-request" method="post" novalidate>
                     <fieldset>
                         <legend>Your Info</legend>
 
                         <label for="name">Name:</label>
-                        
-                        <input type="text" id="name" name="name" required>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            aria-describedby="nameError">
+                        <span class="form-error" id="nameError"></span>
                         
                         <label for="email">Email:</label>
-                        
-                        <input type="email" id="email" name="email" required>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            aria-describedby="emailError">
+                        <span class="form-error" id="emailError"></span>
                     </fieldset>
 
                     <fieldset>
                         <legend>Your Request</legend>
 
                         <label for="pickupDate">Pickup Date:</label>
-                        
-                        <input type="date" id="pickupDate" name="pickupDate">
+                        <input
+                            type="date"
+                            id="pickupDate"
+                            name="pickupDate"
+                            aria-describedby="pickupDateError">
+                        <span class="form-error" id="pickupDateError"></span>
                         
                         <label for="requestType">Request Type:</label>
-                        
-                        <select id="requestType" name="requestType" required>
+                        <select 
+                            id="requestType" 
+                            name="requestType" 
+                            required 
+                            aria-describedby="requestTypeError">
+                            <option value="">Select a request type</option>
                             <option value="preorder">Preorder</option>
                             <option value="generalQuestion">General Question</option>
                         </select>
-                        
+                        <span class="form-error" id="requestTypeError"></span>
+
                         <label for="requestDetails">Request Details:</label>
-                        
-                        <textarea 
-                            id="requestDetails" 
-                            name="requestDetails" 
-                            rows="4" 
-                            cols="50" 
-                            placeholder="Enter your request details here..."></textarea>
+                        <textarea
+                            id="requestDetails"
+                            name="requestDetails"
+                            rows="4"
+                            cols="50"
+                            placeholder="Enter your request details here..."
+                            aria-describedby="requestDetailsError"></textarea>
+                        <span class="form-error" id="requestDetailsError"></span>
                         
                         <label for="allergy">Allergy Info (if applicable):</label>
-                        
-                        <textarea 
-                            id="allergy" 
-                            name="allergy" 
-                            rows="4" 
-                            cols="50" 
+                        <textarea
+                            id="allergy"
+                            name="allergy"
+                            rows="4"
+                            cols="50"
                             placeholder="Enter any applicable allergy info here..."></textarea>
-
                     </fieldset>
 
                     <button type="submit">Submit Request</button>
