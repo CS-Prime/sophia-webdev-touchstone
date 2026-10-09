@@ -4,26 +4,15 @@
  */
 
 function productFilter() {
-    const filterButtons = document.querySelectorAll(
-        ".product-filter button"
-    );
-
-    const filterCategories = document.querySelectorAll(
-        ".product-category"
-    )
-
-    const currentState = {
-        selectedCategory: "all"
-    }
-
-    const storageKey = "productCategoryFilter"
-
-    const savedState = sessionStorage.getItem(storageKey)
+    const filterButtons = document.querySelectorAll(".product-filter button");
+    const filterCategories = document.querySelectorAll(".product-category");
+    const currentState = { selectedCategory: "all" };
+    const storageKey = "productCategoryFilter";
+    const savedState = sessionStorage.getItem(storageKey);
 
     if (savedState) {
-        const parsedState = JSON.parse(savedState)
-
-        currentState.selectedCategory = parsedState.selectedCategory
+        const parsedState = JSON.parse(savedState);
+        currentState.selectedCategory = parsedState.selectedCategory;
     }
 
     function applyFilter() {
@@ -43,31 +32,17 @@ function productFilter() {
         filterButtons.forEach(function (button) {
             const isActive = button.dataset.filter === currentState.selectedCategory;
 
-            button.classList.toggle(
-                "active",
-                isActive
-            );
-
-            button.setAttribute(
-                "aria-pressed",
-                isActive.toString()
-            );
+            button.classList.toggle("active", isActive);
+            button.setAttribute("aria-pressed", isActive.toString());
         });
     }
 
     filterButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            const selectedCategory =
-                button.dataset.filter;
+            const selectedCategory = button.dataset.filter;
 
-            currentState.selectedCategory =
-                selectedCategory;
-
-            sessionStorage.setItem(
-                storageKey,
-                JSON.stringify(currentState)
-            );
-
+            currentState.selectedCategory = selectedCategory;
+            sessionStorage.setItem(storageKey, JSON.stringify(currentState));
             applyFilter();
         });
     });
