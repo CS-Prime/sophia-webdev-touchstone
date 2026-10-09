@@ -3,7 +3,6 @@
  * @author Cameron Simpson
  */
 
-// Variables
 const storageKey = "northStarContactForm";
 
 const form = document.querySelector("#contactForm");
